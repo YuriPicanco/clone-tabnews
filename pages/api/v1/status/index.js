@@ -4,6 +4,7 @@ async function status(req, res) {
   const updatedAt = new Date().toISOString();
 
   const rowsVersion = await database.query("SHOW server_version;");
+
   const databaseVersionValue = await rowsVersion.rows[0].server_version;
 
   const databaseMaxConnectionsResult = await database.query(
