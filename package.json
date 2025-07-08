@@ -5,16 +5,17 @@
    "scripts": {
       "lint:check": "prettier --check .",
       "lint:fix": "prettier --write .",
-      "test": "jest --watch",
+      "test": "jest --watchAll",
+      "dev": "npm run docker-up; next dev",
       "docker-up": "docker compose -f infra/compose.yaml up -d",
-      "docker-down": "docker compose -f infra/compose.yaml down",
-      "dev": "next dev"
+      "docker-down": "docker compose -f infra/compose.yaml down"
    },
    "author": "",
    "license": "MIT",
    "description": "",
    "dependencies": {
       "next": "^13.1.6",
+      "pg": "^8.11.3",
       "react": "^18.2.0",
       "react-dom": "^18.2.0"
    },
